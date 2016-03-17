@@ -1,0 +1,210 @@
+*{margin: 0;padding: 0;}
+body{
+	/*background:url(../img/page-background.png) ;*/
+	background-color: #101010;
+}
+#nav{
+	font-family: "微软雅黑";
+	color: #ffffff;
+	border-left: 10px solid #d54ab6;
+	position: absolute;
+	top: 30px;
+	left: 180px;
+	background-color: #333333;
+	
+	height: 70px;
+	width: 955px;	
+}
+#nav ul{	
+	font-size: x-large;
+	list-style: none;	
+}
+#nav a{
+	font-family: "微软雅黑";
+	color: #ffffff;
+	text-align: center;
+	line-height: 70px;
+	height: 70px;
+	float: right;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	width: 150px;
+}
+#nav a:hover{
+	color: orangered;
+}
+#nav a:visited{
+	background-color: #808080;
+}
+#nav #round{
+	margin: 18px 0 6px 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #d54ab6;
+	float: left;
+}
+#nav p{
+	font-family: "微软雅黑";
+	font-size: x-large;
+	display: block;
+	float: left;
+	line-height: 70px;
+	margin-left: 6px;
+}
+#head #welcome{
+	color:#FFFFFF;
+	font-family: "微软雅黑";
+	font-size: large;
+	position: absolute;
+	top: 300px;
+	right: 200px;
+	
+}
+#head{
+	margin-top:80px ;
+	width: 100%;
+	height: 500px;
+	background: url('../img/book.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#main{
+	width: 100%px;
+	height: 400px;
+	
+}
+
+#mainTable{
+	color:#FFFFFF ;
+	vertical-align: center;
+	display: block;
+	margin: 50px 0 0 250px;
+}
+tr{
+	
+	height: 80px;
+	width: 500px;
+}
+#mainTable .txt{
+	background-color: #333333;
+	color:#FFFFFF ;
+	width: 250px;
+	height: 24px;
+	padding:8px;
+	line-height: 20px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+#mainTable #tdblock{
+	width: 100px;
+	height: 200px;
+}
+#mainTable p{
+	color:#FFFFFF ;
+	font-family: "微软雅黑";
+	font-size: large;
+}
+#mainTable .txt_2{
+background-color: #333333;
+	color:#FFFFFF ;
+	width: 270px;
+	height: 45px;
+	padding:8px;
+	line-height: 20px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.prompt{
+	margin-left: 9px;
+	display: block;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #D54AB6;
+}
+#mainTable #man,#woman{
+	display: inline-block;
+	width: 30px;
+	height: 25px;
+	/*background: url(../img/male.png);*/
+}
+#mainTable #man img,#woman img{
+	width: 24px;
+	height: 20px;
+}
+#Rbutton{
+			width: 250px;
+			height: 40px;
+			margin: 20px auto;
+		}
+#button1,#button2{
+	        color: #FFFFFF;
+			font-family: "微软雅黑";
+			font-size: normal;
+			font-weight: 500;
+			display: inline-block;
+			border-radius: 2px;
+			border: 1px solid #FFFFFF;
+			background-color: #000000;
+			width: 100px;
+			height: 38px;
+			margin-left: 15px;
+			cursor: pointer;
+}
+footer {
+  color: gray;
+  text-align: center;
+  padding: 15px;
+  margin:    20px 10px 0px 10px;
+  font-size: 90%;
+}
+
+/*plan,outline 的CSS*/
+#plan{
+	height: 300px;
+	margin: 20px auto;
+	width: 955px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+}
+#plan h1{
+	text-align: center;
+}
+#head2{
+	margin-top:80px ;
+	width: 100%;
+	height: 500px;
+	background: url('../img/plan.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#head2 #welcome{
+	color:#FFFFFF;
+	font-family: "微软雅黑";
+	font-size: large;
+	position: absolute;
+	top: 300px;
+	right: 200px;
+	
+}
+
+#head3{
+	margin-top:80px ;
+	width: 100%;
+	height: 500px;
+	background: url('../img/outline.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#head3 #welcome{
+	color:#FFFFFF;
+	font-family: "微软雅黑";
+	font-size: large;
+	position: absolute;
+	top: 300px;
+	right: 200px;
+	
+}

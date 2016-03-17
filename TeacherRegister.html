@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>老师注册</title>
+		<link rel="stylesheet" type="text/css" href="css/TeacherRregister.css"/>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			function $(elementId){
+        return document.getElementById(elementId).value;
+	}
+    function divId(elementId){
+       return document.getElementById(elementId);
+	}	
+	function checknum(){
+        var num = $("number");
+        var pwd_prompt = divId("num_prompt");
+        pwd_prompt.innerHTML="";	
+        if(num.length<10){
+	    pwd_prompt.innerHTML="工号不得少于10位";
+	    return false;
+	  }
+	    return true;
+	  }
+	function checkpwd(){
+        var pwd = $("password");
+        var pwd_prompt = divId("pwd_prompt");
+        pwd_prompt.innerHTML="";	
+        if(pwd.length<6){
+	    pwd_prompt.innerHTML="密码不得少于6位";
+	    return false;
+	  }
+	    return true;
+	  }
+		function checkrpwd(){
+			var pwd =$("password");
+			var rpwd = $("rePassword");
+			var rpwd_prompt = divId("rpwd_prompt");
+			rpwd_prompt.innerHTML="";
+			if(rpwd!=pwd){
+		   	 	rpwd_prompt.innerHTML="两次密码不同请重新输入";
+		   	 	return false;
+		   	 }
+			return true;
+		}
+		
+		function checkemail(){
+			var email=$("email");
+			var email_prompt = divId("email_prompt");
+			email_prompt.innerHTML="";
+			var reg=/^\w+@\w+(\.[a-zA-Z]{2,3}){1,2}$/;
+			if(reg.test(email)==false){
+				email_prompt.innerHTML="邮箱输入格式不正确";
+				return false;
+			}
+			 return true;
+		}
+		</script>
+	</head>
+	<body>
+		<div id="nav">
+			<div id="round"></div><p>TYUT</p>
+			
+			<ul>
+				<li><a href="teacherIntro.html">老师简介</a></li>
+				<li><a href="outline.html">教学大纲</a></li>
+				<li><a href="plan.html">教学计划</a></li>
+				<li><a href="index.html">首页</a></li>
+			</ul>
+		</div>
+
+			<div id="head">
+			<div id="welcome">
+				<h2>"知识的传承者"</h2>
+				<h1>欢迎加入</h1>
+			</div>
+		</div>
+		
+			<div id="main">
+			<!--<div id="register">-->
+	<form>
+		<table id="mainTable">
+			<tr>
+				<td>
+					<table id="table1">
+					<tr>
+						<td><p>姓&nbsp;名：</p></td>
+						<td><input type="text" class="txt" placeholder="请填写真实姓名"/></td>
+					</tr>
+					<tr>
+						<td><p>工&nbsp;号：<p></td>
+						<td><input type="text" class="txt" placeholder="请填写您自己的教师工号,为10位" id="number" onblur="checknum()"/><div id="num_prompt" class="prompt"></div></td>
+					</tr>
+					<tr>
+						<td><p>密&nbsp;码：<p></td>
+						<td><input type="password" class="txt" placeholder="密码不得小于6位" id="password" onblur="checkpwd()"/><div id="pwd_prompt" class="prompt"></div></td>
+					</tr>
+					<tr>
+						<td><p>确认密码：<p></td>
+						<td><input type="password" class="txt" placeholder="请再次输入密码" id="rePassword" onblur="checkrpwd()"/><div id="rpwd_prompt" class="prompt"></div></td>
+					</tr>
+					</table>
+				</td>
+				<td>
+					<div id="tdblock"></div>
+				</td>	
+					
+				<td>
+					<table id="table2">
+					<tr>
+						<td><p>性&nbsp;别：<p></td>
+						<td><input type="radio" name="beantype" checked="" class="txt2"/><div id="man"><img src="img/male.png"/></div>男
+							&nbsp;&nbsp;
+						   <input type="radio" name="beantype"  class="txt2"/><div id="woman"><img src="img/female.png"/></div>女
+						</td>
+					</tr>
+					<tr>
+						<td><p>电子邮箱：<p></td>
+						<td><input type="text" class="txt" id="email" onblur="checkemail()"/><div id="email_prompt" class="prompt"></div></td>
+					</tr>
+					<tr>
+						<td><p>学&nbsp;院：<p></td>
+						<td><select name="collage" class="txt_2">
+							<option value="">软件学院</option>
+							<option value="">物电学院</option>
+							<option value="">政法学院</option>
+							<option value="">外国语学院</option>
+							<option value="">428帝国学院</option>
+						</select>
+						</td>
+					</tr>
+					
+						
+					<tr>
+						<td><p>生&nbsp;日：<p></td>
+						<td><input type="date" class="txt"/></td>
+					</tr>
+					</table>
+				</td>
+			</tr>	
+		</table>
+	
+					<div id="Rbutton">
+					<input type="submit" value="提交"  id="button1"/>
+						<input type="reset" value="重置" id="button2"/>
+				</div>
+		</form>
+			</div>
+			<footer>
+			<p>COPYRIGHT@2013-2017 山西省太原理工大学明向校区428宿舍</p>
+			<p>ICP:ICP晋备666666号</p>
+		</footer>
+	</body>
+</html>

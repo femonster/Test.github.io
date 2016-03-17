@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;}
+body{
+	/*background:url(../img/page-background.png) ;*/
+	background-color: #101010;
+}
+#nav{
+	font-family: "微软雅黑";
+	color: #ffffff;
+	border-left: 10px solid #d54ab6;
+	position: absolute;
+	top: 30px;
+	left: 180px;
+	background-color: #333333;
+	
+	height: 70px;
+	width: 955px;	
+}
+#nav ul{	
+	font-size: x-large;
+	list-style: none;	
+}
+#nav a{
+	font-family: "微软雅黑";
+	color: #ffffff;
+	text-align: center;
+	line-height: 70px;
+	height: 70px;
+	float: right;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	width: 150px;
+}
+#nav a:hover{
+	color: orangered;
+}
+#nav a:visited{
+	background-color: #808080;
+}
+#nav #round{
+	margin: 18px 0 6px 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #d54ab6;
+	float: left;
+}
+#nav p{
+	font-family: "微软雅黑";
+	font-size: x-large;
+	display: block;
+	float: left;
+	line-height: 70px;
+	margin-left: 6px;
+}
+#head #welcome{
+	color:#FFFFFF;
+	font-family: "微软雅黑";
+	font-size: large;
+	position: absolute;
+	top: 300px;
+	right: 200px;
+	
+}
+#head{
+	margin-top:80px ;
+	width: 100%;
+	height: 500px;
+	background: url('../img/teacher.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.a1,.a2,.a3{
+	text-decoration: none;
+	display: block;
+	color: #FFFFFF;
+	width: 270px;
+	height: 450px;
+	font-family: "微软雅黑";
+	text-align: center;
+	position: absolute;
+}
+.a1 h2,.a2 h2,.a3 h2{
+	padding-top: 30px;
+	font-size: x-large;
+	font-weight: 600;
+}
+.a1 h5,.a2 h5,.a3 h5{
+	padding-top: 10px;
+}
+.a1 img,.a2 img,.a3 img{
+	width: 270px;
+	height: 210px;
+	/*margin-top: 2px;*/
+}
+.a1{
+	background-color: #009988;
+	top: 500px;
+	left: 240px;
+}
+.a2{
+	background-color: #C14000;
+	top: 500px;
+	left: 540px;
+}
+
+.a3{
+	background-color: #ffa500;
+	top: 500px;
+	left: 843px;
+}
+#view a{
+	margin: 400px auto 0;
+	text-decoration: none;
+	display: block;
+	font-family: "微软雅黑";
+	font-size: large;
+	font-weight: 700;
+	line-height: 50px;
+	text-align: center;
+	width: 120px;
+	height: 50px;
+	color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	cursor: pointer;
+	/*position: absolute;
+	top: 1308px;
+	right: 160px;*/
+}
+#view a:hover{
+	background-color: #808080;
+}
+
+
+footer {
+  color: gray;
+  text-align: center;
+  padding: 15px;
+  margin:    20px 10px 0px 10px;
+  font-size: 90%;
+}

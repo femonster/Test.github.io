@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jquery模拟后台功能</title>
+		<link rel="stylesheet" type="text/css" href="css/backgroundM.css"/>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+		$(document).ready(function(){
+	       $(".del").click(function () {
+             var mymessage=confirm("确定要删除吗？");
+             if(mymessage==true)
+           {
+    	       $(this).parent().parent().remove();
+           }
+            else{}
+	       });
+	
+	$(".add").click(function () {
+		//创建新节点
+		var newPro = $("<tr>"
+		+ "<td>"
+		+ "<input name='checkname' type='checkbox' value='' />"
+		+ "</td>"
+		+ "<td>候七</td>"
+		+ "<td>005</td>"
+		+ "<td>80</td>"
+		+"<td>9</td>"
+		+ "<td>"
+		+"<a href='#' class='del'>"
+		+"删除"
+		+"</a>"
+		+"</td>"
+		+ "</tr>");
+		//在table中插入新建节点
+		$("table").append(newPro);
+	});
+	//全选 与 全不选 
+         $("#checkall").click(function(){ 
+         if(this.checked){ 
+        $("input[name='checkname']").each(function(){this.checked=true;});
+       }else{ 
+        $("input[name='checkname']").each(function(){this.checked=false;});
+         } 
+      });
+    //删除选中的checkbox
+     $(".del_all").click(function() {
+     	 var my=confirm("确定要删除吗？");
+             if(my==true)
+           {
+    	       $("input[name='checkname']:checked").each(function() { // 遍历选中的checkbox
+			n = $(this).parents("tr").index();  // 获取checkbox所在行的顺序
+			$("table").find("tr:eq("+n+")").remove();
+		});
+           }
+            else{}
+	});
+});
+
+		</script>
+	</head>
+	<body>
+		<div id="nav">
+			<div id="round"></div><p>TYUT</p>
+			<ul>
+				<li><a href="teacherIntro.html">老师简介</a></li>
+				<li><a href="outline.html">教学大纲</a></li>
+				<li><a href="plan.html">教学计划</a></li>
+				<li><a href="index.html">首页</a></li>
+			</ul>
+		</div>
+		<div id="data">
+			<h2>学生成绩单</h2>
+		 <table>
+		 	<tr>
+		 		<td><input type="checkbox" id="checkall">全选</td>
+		 		<td>姓名</td>
+		 		<td>学号</td>
+		 		<td>成绩</td>
+		 		<td>名次</td>
+		 		<td>操作</td>
+		 	</tr>
+		 	<tr>
+		 		<td><input type="checkbox" name="checkname"></td>
+		 		<td>张三</td>
+		 		<td>001</td>
+		 		<td>98</td>
+		 		<td>2</td>
+		 		<td><a href="#" class="del">删除</a></td>
+		 	</tr>
+		 	<tr>
+		 		<td><input type="checkbox" name="checkname"></td>
+		 		<td>李四</td>
+		 		<td>002</td>
+		 		<td>99</td>
+		 		<td>1</td>
+		 		<td><a href="#" class="del">删除</a></td>
+		 	</tr>
+		 	<tr>
+		 		<td><input type="checkbox" name="checkname"></td>
+		 		<td>王五</td>
+		 		<td>003</td>
+		 		<td>96</td>
+		 		<td>4</td>
+		 		<td><a href="#" class="del">删除</a></td>
+		 	</tr>
+		 	<tr>
+		 		<td><input type="checkbox" name="checkname"></td>
+		 		<td>马六</td>
+		 		<td>004</td>
+		 		<td>93</td>
+		 		<td>7</td>
+		 		<td><a href="#" class="del">删除</a></td>
+		 	</tr>
+		 </table>
+		 <a href="#" class="add">添加</a>
+		 <a href="#" class="del_all">删除</a>
+		</div>
+		<footer>
+			<p>COPYRIGHT@2013-2017 山西省太原理工大学明向校区428宿舍</p>
+			<p>ICP:ICP晋备666666号</p>
+		</footer>
+	</body>
+</html>

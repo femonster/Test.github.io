@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>学生成绩管理系统</title>
+		<link rel="stylesheet" href="css/homework.css" />
+		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function() {
+		//老师板块的浮动		
+		$("#Sregister a").hover(function() {
+		    $(this).stop().animate({ marginTop: "-20px" }, 500);
+		},function(){
+		    $(this).stop().animate({ marginTop: "0px" }, 300);
+		});
+		//学生板块的浮动
+		$("#Tregister a").hover(function() {
+		    $(this).stop().animate({ marginTop: "-20px" }, 500);
+		},function(){
+		    $(this).stop().animate({ marginTop: "0px" }, 300);
+		});
+		
+		//实现图片聚光灯效果
+
+       $("#picture ul li").hover(function(){  
+        $(this).siblings().find("i").addClass("opacity_bg"); 
+          },function(){            
+     $(this).siblings().find("i").removeClass("opacity_bg");
+       });
+       
+       //实现老师登录框弹出特效
+       $("#Tregister .a2").click(function(){
+       	$("#block").fadeIn(200);
+       	$("#Tregister_index").slideDown(300);
+       });
+        $("#Tregister_index .close").click(function(){
+       	$("#block").fadeOut(200);
+       	$("#Tregister_index").slideUp(300);
+       });
+       //实现学生登录框弹出特效
+        $("#Sregister .a1").click(function(){
+       	$("#block").fadeIn(200);
+       	$("#Sregister_index").slideDown(300);
+       });
+        $("#Sregister_index .close_2").click(function(){
+       	$("#block").fadeOut(200);
+       	$("#Sregister_index").slideUp(300);
+       });
+       
+	});
+	
+		
+		</script>
+	</head>
+	<body>
+		<div id="nav">
+			<div id="round"></div><p>TYUT</p>
+			
+			<ul>
+				<li><a href="teacherIntro.html">老师简介</a></li>
+				<li><a href="outline.html">教学大纲</a></li>
+				<li><a href="plan.html">教学计划</a></li>
+				<li><a href="index.html">首页</a></li>
+			</ul>
+		</div>
+		<div id="head">
+			<div id="welcome">
+				<h2>Welcome To TYUT's </h2>
+				<h1>Score Management System</h1>
+			</div>
+		</div>
+		<div id="Sregister">
+			<a href="javascript:;" class="a1">
+				<img src="img/student.png"/>
+				<h2>学生通道</h2>
+				<h5>学生登录</h5>
+				<h5>学生信息查看</h5>
+			</a>
+			
+		</div>
+		<div id="Tregister">
+			<a href="javascript:;" class="a2">
+				<img src="img/teacher.png"/>
+				<h2>老师通道</h2>
+				<h5>老师登录注册</h5>
+			<h5>学生信息增删改查</h5>
+			</a>
+			
+		</div>
+		<div id="ourSchool">
+			<h2>Our School's Sights</h2>
+		</div>
+		<div id="picture">
+  <ul>
+      
+      <li><a><img  src="img/1.jpg" /></a><i class="this_bg"></i></li>
+
+      <li><a><img  src="img/2.jpg" /></a><i class="this_bg"></i></li>
+     
+      <li><a><img  src="img/3.jpg" /></a><i class="this_bg"></i></li>
+   
+      <li><a><img  src="img/4.jpg" /></a><i class="this_bg"></i></li>
+      
+      <li><a><img  src="img/5.jpg" /></a><i class="this_bg"></i></li>
+   
+      <li><a><img  src="img/6.jpg" /></a><i class="this_bg"></i></li>
+   
+      <li><a><img  src="img/7.jpg" /></a><i class="this_bg"></i></li>
+    
+      <li><a><img  src="img/8.jpg" /></a><i class="this_bg"></i></li>
+  
+  </ul>
+     
+		</div>
+		<div id="view">
+			<a href=""><p>View more</p></a>
+		</div>
+		<footer>
+			<p>COPYRIGHT@2013-2017 山西省太原理工大学明向校区428宿舍</p>
+			<p>ICP:ICP晋备666666号</p>
+		</footer>
+		<div id="block"></div>
+		<div id="Tregister_index">
+			<a href="javascript:;" title="关闭" class="close">×</a>
+		   <div class="top">
+    	<div id="round2"></div><p>老师登录</p>
+    	<p id="sdl">“教师是人类灵魂的工程师。”<br>---斯大林</p>
+    	
+           </div>
+			<form action="backstageM.html" method="">
+				 <table>
+                <tr>
+		        <td><i><img src="img/user.png"/></i></td>
+		        <td><input type="text" name="username" id="lname" required=""/><div id="user"></div></td>
+		        <td>&nbsp;&nbsp;&nbsp;</td>
+		        
+		        <td><i><img src="img/key.png"/></i></td>
+		        <td><input type="password" name="password" required=""/></td>
+		       </tr>
+	  </table>
+	   <div class="button">
+	  <input type="submit" name="submit" value="Login" class="Sbtn" onclick="check()">
+	  <a href="TeacherRegister.html"><input type="button" name="button" value="register" class="Bbtn"></a>
+	   </div>
+	  </form>
+		</div>
+		
+		<div id="Sregister_index">
+			<a href="javascript:;" title="关闭" class="close_2">×</a>
+		   <div class="top_2">
+    	<div id="round3"></div><p>学生登录</p>
+    	<p id="lqc">“少年强，则国强。”<br>---梁启超</p>
+    	
+           </div>
+			<form action="" method="post">
+				 <table>
+                <tr>
+		        <td><i><img src="img/user.png"/></i></td>
+		        <td><input type="text" name="username" id="lname_2" required=""/><div id="user"></div></td>
+		        <td>&nbsp;&nbsp;&nbsp;</td>
+		        
+		        <td><i><img src="img/key.png"/></i></td>
+		        <td><input type="password" name="password" required=""/></td>
+		       </tr>
+	  </table>
+	   <div class="button_2">
+	  <input type="submit" name="submit" value="Login" class="Sbtn_2" onclick="check()">
+	   </div>
+	  </form>
+		</div>
+	</body>
+</html>
